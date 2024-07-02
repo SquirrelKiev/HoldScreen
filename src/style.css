@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animated {
+  animation: animation 50s cubic-bezier(0.2, 0, 0.8, 1) infinite;
+}
+
+.gradient-bg {
+  background-size: 1000%;
+  background-image: linear-gradient(
+    35deg,
+    #e9a5a5,
+    #b8c1c0,
+    #65c0e0,
+    #aea2db,
+    #81c1d9,
+    #b3b6eb,
+    #e98a98,
+    #c82270
+  );
+  /* background-image: linear-gradient(135deg, #ff0000, #00ff00); */
+}
+
+.text-drop {
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.5))
+    drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+}
+
+@keyframes animation {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.wavy {
+  animation-name: wavy;
+  animation-duration: 2s;
+  animation-timing-function: easeInOutSine;
+  animation-iteration-count: infinite;
+  position: relative;
+  display: inline-block;
+  white-space-collapse: preserve-spaces;
+  top: 0;
+  left: 0;
+}
+@keyframes wavy {
+  0%,
+  100% {
+    top: 0.25em;
+    /* transform: rotate(5deg); */
+  }
+  50% {
+    top: -0.25em;
+    /* transform: rotate(-5deg); */
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s easeOutCubic;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s easeInCubic;
+}
+
+.emote {
+  max-height: 1em;
+}
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}
