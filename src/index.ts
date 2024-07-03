@@ -14,7 +14,9 @@ const emoteMap: { [id: string]: string } = {
     "https://cdn.discordapp.com/emojis/888554651367133204.webp?size=4096&quality=lossless",
   ":based:":
     "https://cdn.discordapp.com/emojis/1210761830931107851.webp?size=4096&quality=lossless",
-    ":akanechuu:":
+  ":toobased:":
+    "https://cdn.discordapp.com/emojis/888544186578653224.webp?size=4096&quality=lossless",
+  ":akanechuu:":
     "https://cdn.discordapp.com/emojis/1113905883504717906.webp?size=4096&quality=lossless",
 
   ":question:":
@@ -70,28 +72,24 @@ function updateText(text: string) {
   });
 }
 
-function changeTextWithFade(
-  text: string,
-  fadeOut: boolean,
-  callback: Function
-) {
+async function changeTextWithFade(text: string, fadeOut: boolean) {
   const $quote = $("#quote");
 
-  if (fadeOut) $quote.addClass("fade-out");
+  if (fadeOut) {
+    $quote.addClass("fade-out");
 
-  // wait for the fade-out to complete
-  setTimeout(() => {
-    updateText(text);
+    // wait for the fade-out to complete
+    await new Promise((resolve) => setTimeout(resolve, 750));
+  }
 
-    $quote.removeClass("fade-out").addClass("fade-in");
+  updateText(text);
 
-    // wait for the fade-in transition to complete
-    // theres probably a better way of handling this
-    setTimeout(() => {
-      $quote.removeClass("fade-in");
-      callback();
-    }, 500);
-  }, 500);
+  $quote.removeClass("fade-out").addClass("fade-in");
+
+  // wait for the fade-in transition to complete
+  await new Promise((resolve) => setTimeout(resolve, 750));
+
+  $quote.removeClass("fade-in");
 }
 
 // a random text that has not been seen before is chosen from here
@@ -114,16 +112,21 @@ const texts = [
   '"is the episode out yet"',
   "this stream is an experiment to see how patient you guys are to see the next episode",
   "and ruby gets no screen time once again :fire: :fire: :fire:",
-  // "new op is so fkn fire but idol still solos",
-  // "goddamn the new ending song is so good",
+  'yknow i originally wrote "idol solos" here but the new op was so fkn good that i take it all back',
+  "goddamn the new ending song is so good",
   '"I WILL BE YOUR OSHI NO KO" :speaking_head::fire::fire:',
-  "im running out of quote ideas here",
+  "send me quote ideas for this screen",
   "good things come to those who wait",
   "gunchap recommendation: read higurashi!",
-  "yanii recommendation: read your forma!",
+  "yanii recommendation: read Your Forma!",
+  "fenix recommendation: read ReLIFE!",
+  "catge recommendation: read Asumi-chan!",
+  "triangled recommendation: watch bunny girl senpai! (kiev note: :toobased:)",
   "go play zenless zone zero when it comes out :based: (4th July)",
   ":akanechuu:",
   "i should put music on this screen",
+  '"Which part...? Well... The whole thing?" - abiko on what their favourite part of oshi no ko season 2 was',
+  "ujdiklafnmaefrpl[;/wnjm",
 ];
 
 let unseenIndices = [...Array(texts.length).keys()];
@@ -145,13 +148,11 @@ function getRandomIndex() {
 }
 
 $(function () {
-  function loopTextChange(fadeOut: boolean) {
+  async function loopTextChange(fadeOut: boolean) {
     const randomIndex = getRandomIndex();
-    changeTextWithFade(texts[randomIndex], fadeOut, () => {
-      setTimeout(() => {
-        loopTextChange(true);
-      }, 15000);
-    });
+    await changeTextWithFade(texts[randomIndex], fadeOut);
+    await new Promise((resolve) => setTimeout(resolve, 15000));
+    loopTextChange(true);
   }
 
   loopTextChange(false);
