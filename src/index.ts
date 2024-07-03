@@ -14,6 +14,8 @@ const emoteMap: { [id: string]: string } = {
     "https://cdn.discordapp.com/emojis/888554651367133204.webp?size=4096&quality=lossless",
   ":based:":
     "https://cdn.discordapp.com/emojis/1210761830931107851.webp?size=4096&quality=lossless",
+    ":akanechuu:":
+    "https://cdn.discordapp.com/emojis/1113905883504717906.webp?size=4096&quality=lossless",
 
   ":question:":
     "https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2753.svg",
@@ -101,7 +103,6 @@ const texts = [
   "akane > kana",
   ":gayge: :question:", // this gets replaced with the emotes
   ":rickroll:",
-  "ask the mods about #ruby-fanclub they'll really appreciate it",
   "oshi no ko, sponsored by Door Chains™",
   "why did aqua not use his mind powers to banish that stalker guy is he stupid",
   '"i wonder whos at the door" - :clueless:',
@@ -110,21 +111,19 @@ const texts = [
   "why do i keep adding to this waiting screen this is getting ridiculous",
   "whats gonna happen in this episode (wrong answers only)",
   "TRUST IN THE AKA PLAN :COPIUM:",
-  "its all downhill from here",
-  "i think aka should let me write oshi no ko from now on",
   '"is the episode out yet"',
   "this stream is an experiment to see how patient you guys are to see the next episode",
-  "tokyo blade best arc",
   "and ruby gets no screen time once again :fire: :fire: :fire:",
-  "new op is so fkn fire but idol still solos",
-  "goddamn the new ending song is so good",
+  // "new op is so fkn fire but idol still solos",
+  // "goddamn the new ending song is so good",
   '"I WILL BE YOUR OSHI NO KO" :speaking_head::fire::fire:',
   "im running out of quote ideas here",
   "good things come to those who wait",
   "gunchap recommendation: read higurashi!",
   "yanii recommendation: read Your Forma :speaking_head::fire:",
   "go play zenless zone zero when it comes out :based: (4th July)",
-  ",m 123 18; ,m 143",
+  ":akanechuu:",
+  "i should put music on this screen",
 ];
 
 let unseenIndices = [...Array(texts.length).keys()];
@@ -151,7 +150,7 @@ $(function () {
     changeTextWithFade(texts[randomIndex], fadeOut, () => {
       setTimeout(() => {
         loopTextChange(true);
-      }, 10000);
+      }, 15000);
     });
   }
 
