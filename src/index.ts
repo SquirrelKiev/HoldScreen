@@ -120,7 +120,7 @@ const texts = [
   "im running out of quote ideas here",
   "good things come to those who wait",
   "gunchap recommendation: read higurashi!",
-  "yanii recommendation: read Your Forma :speaking_head::fire:",
+  "yanii recommendation: read your forma!",
   "go play zenless zone zero when it comes out :based: (4th July)",
   ":akanechuu:",
   "i should put music on this screen",
