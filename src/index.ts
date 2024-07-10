@@ -122,7 +122,6 @@ const texts = [
   "fenix recommendation: read ReLIFE!",
   "catge recommendation: read Asumi-chan!",
   "triangled recommendation: watch bunny girl senpai! (kiev note: :toobased:)",
-  "go play zenless zone zero when it comes out :based: (4th July)",
   ":akanechuu:",
   "i should put music on this screen",
   '"Which part...? Well... The whole thing?" - abiko on what their favourite part of oshi no ko season 2 was',
