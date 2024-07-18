@@ -18,6 +18,8 @@ const emoteMap: { [id: string]: string } = {
     "https://cdn.discordapp.com/emojis/888544186578653224.webp?size=4096&quality=lossless",
   ":akanechuu:":
     "https://cdn.discordapp.com/emojis/1113905883504717906.webp?size=4096&quality=lossless",
+    ":pepehands:":
+      "https://cdn.discordapp.com/emojis/929402021558227056.webp?size=4096&quality=lossless",
 
   ":question:":
     "https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2753.svg",
@@ -41,6 +43,8 @@ function updateText(text: string) {
     const imgTag = `<img src="${emoteMap[emote]}" class="emote" />`;
     text = text.replace(new RegExp(emote, "g"), imgTag);
   });
+
+  text = text.replace("{textCount}", texts.length.toString());
 
   const parts = text
     .split(/(<img.*?\/>)/g)
@@ -122,10 +126,18 @@ const texts = [
   "fenix recommendation: read ReLIFE!",
   "catge recommendation: read Asumi-chan!",
   "triangled recommendation: watch bunny girl senpai! (kiev note: :toobased:)",
+  "kiev recommendation: watch the vtuber anime!",
+  "kiev recommendation: watch made in abyss!",
   ":akanechuu:",
   "i should put music on this screen",
   '"Which part...? Well... The whole thing?" - abiko on what their favourite part of oshi no ko season 2 was',
   "ujdiklafnmaefrpl[;/wnjm",
+  "nobody is watching dungeon people, its a good show guys i promise :pepehands:",
+  "suisei hoshimachi",
+  "are any of you guys watching any shows this season other than oshi no ko?",
+  "I wanna stop watching isekai trash",
+  ",claim multi all; t!daily; s?me; t!rank",
+  "fun fact: there are {textCount} total splash texts that can appear here!",
 ];
 
 let unseenIndices = [...Array(texts.length).keys()];
