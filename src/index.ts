@@ -138,6 +138,7 @@ const texts = [
   "I wanna stop watching isekai trash",
   ",claim multi all; t!daily; s?me; t!rank",
   "fun fact: there are {textCount} total splash texts that can appear here!",
+  "not late this time™️"
 ];
 
 let unseenIndices = [...Array(texts.length).keys()];
