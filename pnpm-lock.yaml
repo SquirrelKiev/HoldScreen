@@ -11,6 +11,9 @@ devDependencies:
   autoprefixer:
     specifier: ^10.4.19
     version: 10.4.19(postcss@8.4.38)
+  hotkeys-js:
+    specifier: ^3.13.7
+    version: 3.13.7
   jquery:
     specifier: ^3.7.1
     version: 3.7.1
@@ -737,6 +740,10 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       function-bind: 1.1.2
+    dev: true
+
+  /hotkeys-js@3.13.7:
+    resolution: {integrity: sha512-ygFIdTqqwG4fFP7kkiYlvayZppeIQX2aPpirsngkv1xM1lP0piDY5QEh68nQnIKvz64hfocxhBaD/uK3sSK1yQ==}
     dev: true
 
   /is-binary-path@2.1.0:

@@ -11,6 +11,7 @@
   "devDependencies": {
     "@types/jquery": "^3.5.30",
     "autoprefixer": "^10.4.19",
+    "hotkeys-js": "^3.13.7",
     "jquery": "^3.7.1",
     "postcss": "^8.4.38",
     "postcss-easings": "^4.0.0",

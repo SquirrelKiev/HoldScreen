@@ -1,3 +1,4 @@
+import hotkeys from "hotkeys-js";
 import $ from "jquery";
 
 const emoteMap: { [id: string]: string } = {
@@ -18,8 +19,8 @@ const emoteMap: { [id: string]: string } = {
     "https://cdn.discordapp.com/emojis/888544186578653224.webp?size=4096&quality=lossless",
   ":akanechuu:":
     "https://cdn.discordapp.com/emojis/1113905883504717906.webp?size=4096&quality=lossless",
-    ":pepehands:":
-      "https://cdn.discordapp.com/emojis/929402021558227056.webp?size=4096&quality=lossless",
+  ":pepehands:":
+    "https://cdn.discordapp.com/emojis/929402021558227056.webp?size=4096&quality=lossless",
 
   ":question:":
     "https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2753.svg",
@@ -138,7 +139,7 @@ const texts = [
   "I wanna stop watching isekai trash",
   ",claim multi all; t!daily; s?me; t!rank",
   "fun fact: there are {textCount} total splash texts that can appear here!",
-  "not late this time™️"
+  "not late this time™️",
 ];
 
 let unseenIndices = [...Array(texts.length).keys()];
@@ -159,13 +160,17 @@ function getRandomIndex() {
   return unseenIndices.splice(randomIndex, 1)[0];
 }
 
-$(function () {
+$(() => {
   async function loopTextChange(fadeOut: boolean) {
     const randomIndex = getRandomIndex();
     await changeTextWithFade(texts[randomIndex], fadeOut);
     await new Promise((resolve) => setTimeout(resolve, 15000));
     loopTextChange(true);
   }
+
+  hotkeys("alt+k", () => {
+    $("#overlay").removeClass("opacity-0").addClass("fade-in-slow");
+  });
 
   loopTextChange(false);
 });
