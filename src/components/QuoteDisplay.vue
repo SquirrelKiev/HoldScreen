@@ -1,5 +1,31 @@
+<template>
+  <p
+    class="mx-auto mt-4 flex h-[2em] justify-center text-4xl drop-shadow-md"
+    :class="fadeClass"
+  >
+    <template
+      v-for="(part, index) in currentQuote"
+      :key="{ currentIndex, index }"
+    >
+      <img
+        v-if="part.isEmote"
+        :src="part.content"
+        class="wavy max-h-[1em]"
+        :style="{ animationDelay: `${index * delay}s` }"
+      />
+      <span
+        v-else
+        class="wavy"
+        :style="{ animationDelay: `${index * delay}s` }"
+      >
+        {{ part.content }}
+      </span>
+    </template>
+  </p>
+</template>
+
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted, defineProps } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
 
 const props = defineProps<{
   texts: string[];
@@ -64,26 +90,3 @@ onMounted(() => {
   });
 });
 </script>
-
-<template>
-  <p
-    class="flex justify-center drop-shadow-md mx-auto mt-4 h-[2em] text-4xl"
-    :class="fadeClass"
-  >
-    <template v-for="(part, index) in currentQuote" :key="{currentIndex, index}">
-      <img
-        v-if="part.isEmote"
-        :src="part.content"
-        class="emote wavy"
-        :style="{ animationDelay: `${index * delay}s` }"
-      />
-      <span
-        v-else
-        class="wavy"
-        :style="{ animationDelay: `${index * delay}s` }"
-      >
-        {{ part.content }}
-      </span>
-    </template>
-  </p>
-</template>

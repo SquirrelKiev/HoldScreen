@@ -1,30 +1,35 @@
 <template>
-  <div class="font-bold font-quicksand text-white" spellcheck="false">
+  <div class="font-quicksand font-bold text-white" spellcheck="false">
     <BlackOverlay />
-    <div class="flex w-screen h-screen animated gradient-bg">
+    <div class="animated gradient-bg flex h-screen w-screen">
+      <p class="absolute mt-4 w-full text-center text-2xl drop-shadow-md">
+        have any song requests for next time?<br />
+        ping me (@enonibobble) with the animethemes.moe link!<br />
+        (must be from <span class="text-blue-700 underline decoration-2">animethemes.moe</span>, aka i'm only accepting OPs and EDs from
+        anime for now)
+      </p>
       <div class="m-auto">
-        <p
-          class="drop-shadow-md text-7xl text-center"
-          contenteditable
-        >
+        <p class="text-center text-7xl drop-shadow-md" contenteditable>
           just waiting for hidive to release the episode
         </p>
-        <QuoteDisplay :emotes="emotes" :texts="texts"/>
+        <QuoteDisplay :emotes="emotes" :texts="texts" />
       </div>
-      
-      <div class="right-0 bottom-0 left-0 absolute flex justify-center mb-20">
+
+      <MusicDisplay class="absolute bottom-0" />
+
+      <div class="absolute bottom-0 left-0 right-0 flex justify-center">
         <img
-          src="https://cdn.discordapp.com/emojis/1231502178280280124.gif?size=128&quality=lossless"
-          class="h-24"
+          src="https://media.discordapp.net/stickers/1261035565122453616.png"
+          class="h-48"
         />
       </div>
-      <img
+      <!-- <img
         src="https://media.discordapp.net/stickers/1098958701316026418.webp?size=4096"
         class="bottom-0 absolute h-20"
-      />
+      /> -->
       <img
         src="https://media.discordapp.net/stickers/1098958701316026418.webp?size=4096"
-        class="right-0 bottom-0 absolute h-20 scale-x-[-1]"
+        class="absolute bottom-0 right-0 h-20 scale-x-[-1]"
       />
     </div>
   </div>
@@ -34,19 +39,21 @@
 // import hotkeys from "hotkeys-js";
 import QuoteDisplay from "./components/QuoteDisplay.vue";
 import BlackOverlay from "./components/BlackOverlay.vue";
-import texts from './assets/texts.json';
-import emotes from './assets/emotes.json';
+import MusicDisplay from "./components/MusicDisplay.vue";
+import texts from "./assets/texts.json";
+import emotes from "./assets/emotes.json";
 
 export default {
-  data(){
+  data() {
     return {
       texts: texts,
-      emotes: emotes
-    }
+      emotes: emotes,
+    };
   },
   components: {
     QuoteDisplay,
-    BlackOverlay
+    BlackOverlay,
+    MusicDisplay,
   },
 };
 </script>

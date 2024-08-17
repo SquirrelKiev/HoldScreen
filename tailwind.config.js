@@ -9,7 +9,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "quicksand": ["Quicksand", "sans-serif"]
+        "quicksand": ["Quicksand", "sans-serif"],
+        "comic": ["Comic Sans MS", "sans-serif"],
       }
     },
   },

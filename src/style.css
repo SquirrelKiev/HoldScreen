@@ -78,10 +78,6 @@
   transition: opacity 2s easeInSine;
 }
 
-.emote {
-  max-height: 1em;
-}
-
 [contenteditable] {
   outline: 0px solid transparent;
 }

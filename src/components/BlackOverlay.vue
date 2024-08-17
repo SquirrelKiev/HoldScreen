@@ -1,8 +1,7 @@
 <template>
   <div
-    class="top-0 left-0 z-10 absolute bg-black w-screen h-screen"
+    class="absolute left-0 top-0 z-50 h-screen w-screen bg-black"
     :class="overlayClass"
-    v-if="shouldShow"
   ></div>
 </template>
 
@@ -11,7 +10,9 @@ import { computed, onMounted, onUnmounted, ref } from "vue";
 import hotkeys from "hotkeys-js";
 
 const shouldShow = ref(false);
-const overlayClass = computed(() => shouldShow.value ? "opacity-0" : "fade-in-slow");
+const overlayClass = computed(() =>
+  shouldShow.value ? "fade-in-slow" : "opacity-0 pointer-events-none",
+);
 
 onMounted(() => {
   hotkeys("alt+h", (event) => {
