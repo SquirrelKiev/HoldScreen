@@ -1,4 +1,4 @@
-[
+export default [
     {
         "title": "Burning (English Version)",
         "artist": "Hitsujibungaku",
@@ -20,13 +20,13 @@
         "art": "mortalwithyou.jpg",
         "file": "mortalwithyou.webm"
     },
-    {
-        "title": "Koi no Uta",
-        "artist": "Tsukasa Yuzaki (CV: Akari Kitou)",
-        "anime": "TONIKAWA: Over The Moon For You",
-        "art": "koinouta.jpg",
-        "file": "koinouta.webm"
-    },
+    // {
+    //     "title": "Koi no Uta",
+    //     "artist": "Tsukasa Yuzaki (CV: Akari Kitou)",
+    //     "anime": "TONIKAWA: Over The Moon For You",
+    //     "art": "koinouta.jpg",
+    //     "file": "koinouta.webm"
+    // },
     {
         "title": "Happiness of the Dead",
         "artist": "Shiyui",

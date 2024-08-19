@@ -1,4 +1,4 @@
-[
+export default [
   "\"i am become... the oshi no ko\"",
   "\"nah. i'd kill my father\" - aqua probably",
   "hello groupwatchers",
@@ -16,8 +16,6 @@
   "\"is the episode out yet\"",
   "this stream is an experiment to see how long weebs will wait for an episode",
   "and ruby gets no screen time once again :fire: :fire: :fire:",
-  "yknow i originally wrote \"idol solos\" here but the new op was so fkn good that i take it all back",
-  "goddamn the new ending song is so good",
   "\"I WILL BE YOUR OSHI NO KO\" :speaking_head::fire::fire:",
   "send me quote ideas for this screen",
   "good things come to those who wait",
@@ -29,7 +27,7 @@
   "kiev recommendation: watch the vtuber anime!",
   "kiev recommendation: watch made in abyss!",
   ":akanechuu:",
-  "i should put music on this screen",
+  "finally added music to this screen :freedom:",
   "\"Which part...? Well... The whole thing?\" - abiko on what their favourite part of oshi no ko season 2 was",
   "ujdiklafnmaefrpl[;/wnjm",
   "nobody is watching dungeon people, its a good show guys i promise :pepehands:",
@@ -37,6 +35,7 @@
   "are any of you guys watching any shows this season other than oshi no ko?",
   "I wanna stop watching isekai trash",
   ",claim multi all; t!daily; s?me; t!rank",
-  "fun fact: there are {textCount} total splash texts that can appear here!",
-  "not late this time™️"
+  "fun fact: there are [[textCount]] total splash texts that can appear here!",
+  "not late this time™️",
+  "{{#ff0000;h}}{{#ff3800;o}}{{#ff7100;w }}{{#ffe200;i }}{{#aaff00;f}}{{#71ff00;e}}{{#38ff00;e}}{{#00ff00;l }}{{#00ff71;a}}{{#00ffaa;f}}{{#00ffe2;t}}{{#00e2ff;e}}{{#00a9ff;r }}{{#0038ff;i }}{{#3800ff;s}}{{#7100ff;e}}{{#aa00ff;e }}{{#ff00e2;m}}{{#ff00aa;e}}{{#ff0071;l}}{{#ff0038;t}}"
 ]

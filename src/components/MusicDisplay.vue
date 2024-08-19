@@ -26,8 +26,8 @@
 
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from "vue";
-import { Howl, Howler } from "howler";
-import songs from "../assets/songs.json";
+import { Howl } from "howler";
+import songs from "../assets/songs.ts";
 import hotkeys from "hotkeys-js";
 
 let sound: Howl | null = null;

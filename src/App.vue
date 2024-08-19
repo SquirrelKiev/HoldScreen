@@ -4,9 +4,8 @@
     <div class="animated gradient-bg flex h-screen w-screen">
       <p class="absolute mt-4 w-full text-center text-2xl drop-shadow-md">
         have any song requests for next time?<br />
-        ping me (@enonibobble) with the animethemes.moe link!<br />
-        (must be from <span class="text-blue-700 underline decoration-2">animethemes.moe</span>, aka i'm only accepting OPs and EDs from
-        anime for now)
+        ping me (@enonibobble) with the song! (only requirement is it is from an
+        anime)
       </p>
       <div class="m-auto">
         <p class="text-center text-7xl drop-shadow-md" contenteditable>
@@ -40,8 +39,8 @@
 import QuoteDisplay from "./components/QuoteDisplay.vue";
 import BlackOverlay from "./components/BlackOverlay.vue";
 import MusicDisplay from "./components/MusicDisplay.vue";
-import texts from "./assets/texts.json";
-import emotes from "./assets/emotes.json";
+import texts from "./assets/texts.ts";
+import emotes from "./assets/emotes.ts";
 
 export default {
   data() {
